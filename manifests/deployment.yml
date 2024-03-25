@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: andrewbropipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: andrewbropipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: andrewbropipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: andrewbropipelinesjavascriptdocker 
+          image: mycontainerregistryassignment2.azurecr.io/andrewbropipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
